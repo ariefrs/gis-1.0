@@ -1,0 +1,16 @@
+#column3{
+	background-color: #333;
+	color: #fff;
+	padding: 2em;
+}
+/*Media Queries*/
+@media(min-width: 700px) {
+	.grid {
+		display: grid;
+		/*grid-template-columns: 1fr 1fr 1fr;*/
+	}
+	#column3{
+		display: flex;
+		flex-direction: column;
+	}
+}
