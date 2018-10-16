@@ -1,0 +1,15 @@
+$('#new_price').val().replace(/[^\d\.]/g, '');
+
+The way this regex works is as follows:
+
+/  -> start of regex literal
+[  -> start of a "character class". Basically you're saying I to match ANY of the
+      characters in this class.
+^  -> this negates the character class which says I want anything that is NOT in 
+      this character class
+\d -> this means digits, so basically 0-9.
+\. -> Since . is a metacharacter which means "any character", we need to escape 
+      it to tell the regex to look for the actual . character
+]  -> end of the character class
+/  -> end of the regex literal.
+g  -> global flag that tells the regex to match every instance of the pattern.
