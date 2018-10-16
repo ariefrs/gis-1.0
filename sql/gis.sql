@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2018 at 02:34 PM
+-- Generation Time: Oct 16, 2018 at 10:39 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -553,6 +553,62 @@ INSERT INTO `kabupaten` (`id`, `user_id`, `created`, `created_by`, `modified_use
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `klasifikasi_objek`
+--
+
+CREATE TABLE `klasifikasi_objek` (
+  `id` int(11) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `created_by` varchar(50) NOT NULL,
+  `modified_user_id` int(11) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `klasifikasi_objek`
+--
+
+INSERT INTO `klasifikasi_objek` (`id`, `description`, `user_id`, `created`, `created_by`, `modified_user_id`, `modified`, `modified_by`) VALUES
+(1, 'Apartemen', 72, '2017-01-30 04:30:25', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(2, 'Kios', 72, '2017-01-30 04:30:41', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(3, 'Peralatan dan Perlengkapan Bangunan', 72, '2017-01-30 04:30:55', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(4, 'Rumah Kantor', 72, '2017-01-30 04:35:16', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(5, 'Rumah Tinggal', 72, '2017-01-30 04:37:26', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(6, 'Rumah Toko', 72, '2017-01-30 04:46:24', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(7, 'Satu Unit Alat Transportasi Non Angkutan', 72, '2017-01-30 04:47:51', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(8, 'Satu Unit Mesin Individual', 72, '2017-01-30 04:48:03', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(9, 'Tanah Kosong', 72, '2017-01-30 04:48:20', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(10, 'Alat Berat', 72, '2017-01-30 04:48:59', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(11, 'Alat Kesehatan', 72, '2017-01-30 04:52:09', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(12, 'Alat Komunikasi', 72, '2017-01-30 04:55:20', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(13, 'Alat Laboratorium & Utilitas', 72, '2017-01-30 04:55:29', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(14, 'Alat Transportasi', 72, '2017-01-30 04:55:39', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(15, 'Kehutanan', 72, '2017-01-30 04:55:47', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(16, 'Mesin dan Peralatan', 72, '2017-01-30 04:55:56', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(17, 'Peralatan dan Perabotan Kantor', 72, '2017-01-30 04:56:06', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(18, 'Peralatan Militer', 72, '2017-01-30 04:56:20', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(19, 'Perangkat Telekomunikasi', 72, '2017-01-30 04:56:35', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(20, 'Perikanan', 72, '2017-01-30 04:56:44', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(21, 'Perkebunan', 72, '2017-01-30 04:56:54', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(22, 'Pertambangan', 72, '2017-01-30 04:57:03', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(23, 'Pertanian', 72, '2017-01-30 04:57:11', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(24, 'Peternakan', 72, '2017-01-30 04:57:18', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(25, 'Tanah dan Bangunan', 72, '2017-01-30 04:57:28', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(26, 'Aset Tak Berwujud', 72, '2017-01-30 04:57:36', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(27, 'Entitas Bisnis', 72, '2017-01-30 04:57:45', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(28, 'Hak dan Kewajiban Perusahaan', 72, '2017-01-30 04:57:54', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(29, 'Instrumen Keuangan', 72, '2017-01-30 04:58:03', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(30, 'Kerugian Ekonomis', 72, '2017-01-30 04:58:11', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(31, 'Opini Kewajaran', 72, '2017-01-30 04:58:21', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(32, 'Penyertaan', 72, '2017-01-30 04:58:30', 'ariefrs', 0, '0000-00-00 00:00:00', ''),
+(33, 'Surat Berharga Termasuk Derivasi', 72, '2017-01-30 04:58:38', 'ariefrs', 0, '0000-00-00 00:00:00', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pembanding`
 --
 
@@ -619,7 +675,7 @@ INSERT INTO `pembanding` (`id`, `user_id`, `created`, `created_by`, `modified_us
 (28, 1, '2018-01-17 10:08:48', 'Administrator', 106, '2018-01-17 11:09:56', 'Rama Aditya', 'Jalan Kebayoran Lama\r\nGrogol Selatan, Jakarta Selatan, DKI Jakarta', 'Penawaran', 100000000000, 4000, 200, '08xx-xxxx-xxxx', 'John Doe', '-6.2268333,106.7785833', '', '545/LP/XII/2017', 'Tanah dan Bangunan', 'Real Properti', '', '', '', 9, 189, 2017),
 (29, 1, '2018-01-17 10:08:48', 'Administrator', 106, '2018-01-17 11:11:09', 'Rama Aditya', 'Jalan Kebayoran Lama Grogol Utara, Jakarta Selatan, DKI Jakarta', 'Penawaran', 30000000000, 1000, 0, '08xx-xxxx-xxxx', 'John Doe', '-6.2092778,106.7814502', '', '545/LP/XII/2017', 'Tanah dan Bangunan', 'Real Properti', '', '', '', 9, 189, 2017),
 (30, 1, '2018-01-17 10:08:48', 'Administrator', 106, '2018-01-17 11:08:09', 'Rama Aditya', 'Jalan Kebayoran Lama Grogol Utara, Jakarta Selatan, DKI Jakarta', 'Penawaran', 25485000000, 1699, 0, '08xx-xxxx-xxxx', 'John Doe', '-6.2111667,106.7811446', '', '545/LP/XII/2017', 'Tanah Kosong', 'Real Properti', '', '', '', 9, 189, 2017),
-(31, 1, '2018-01-17 10:50:21', 'Administrator', 97, '2018-03-19 15:20:35', 'Agung Laksana', 'Desa Baengas, Bangkalan, Jawa Timur', 'Penawaran', 2660000000, 3800, 0, '08xx-xxxx-xxxx', 'John Doe', '-7.1417044,112.7899647,3135', '', '278/LP/VII/2017', 'Tanah Kosong', 'Real Properti', '', '', '', 13, 227, 2017),
+(31, 1, '2018-01-17 10:50:21', 'Administrator', 0, '2018-10-12 16:53:14', '', 'Desa Baengas, Bangkalan, Jawa Timur', 'Penawaran', 2660000000, 3800, 0, '08xx-xxxx-xxxx', 'John Doe', '-7.1417044,112.7899647', '', '278/LP/VII/2017', 'Tanah Kosong', 'Real Properti', '', '', '', 13, 227, 2017),
 (32, 1, '2018-01-17 10:50:21', 'Administrator', 97, '2018-03-19 15:18:07', 'Agung Laksana', 'Desa Baengas, Bangkalan, Jawa Timur', 'Penawaran', 600000000, 2000, 0, '08xx-xxxx-xxxx', 'John Doe', '-7.04075705683674,112.73706436157227', '', '278/LP/VII/2017', 'Tanah Kosong', 'Real Properti', '', '', '', 13, 227, 2017);
 
 -- --------------------------------------------------------
@@ -694,6 +750,12 @@ ALTER TABLE `kabupaten`
   ADD KEY `modified` (`modified`);
 
 --
+-- Indexes for table `klasifikasi_objek`
+--
+ALTER TABLE `klasifikasi_objek`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pembanding`
 --
 ALTER TABLE `pembanding`
@@ -722,6 +784,12 @@ ALTER TABLE `propinsi`
 --
 ALTER TABLE `kabupaten`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
+
+--
+-- AUTO_INCREMENT for table `klasifikasi_objek`
+--
+ALTER TABLE `klasifikasi_objek`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `pembanding`
